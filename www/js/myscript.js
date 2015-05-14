@@ -14,7 +14,7 @@ function rekllama(){
 		};
 	} else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
 		admobid = { // for iOS
-			banner: '',
+			banner: 'ca-app-pub-9114339752225416/7304638684',
 			interstitial: ''
 		};
 	} else {
@@ -25,7 +25,6 @@ function rekllama(){
 	}
 
 	function initApp() {
-		alert('rekllama u krijua');
 		if (AdMob) {
 			AdMob.createBanner({
 				adId : admobid.banner,
