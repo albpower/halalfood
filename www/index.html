@@ -94,6 +94,21 @@ take care of what he/she eats or drinks so we decided to help our brothers and s
 <a href="http://fb.com/eskan.osman" data-rel="external"><img src="images/fb-icon.png" width="30" height="30"></a>
 <a href="mailto:w0rt3x@hotmail.com" data-rel="external"><img src="images/mail-icon.png" width="30" height="30"></a><br>
 </p>
+<p>
+<button onclick="window.plugins.socialsharing.share('Message only')">message only</button>
+<button onclick="window.plugins.socialsharing.share('Message and subject', 'The subject')">message and subject</button>
+<button onclick="window.plugins.socialsharing.share(null, null, null, 'http://www.x-services.nl')">link only</button>
+<button onclick="window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')">message and link</button>
+<button onclick="window.plugins.socialsharing.share(null, null, 'https://www.google.nl/images/srpr/logo4w.png', null)">image only</button>
+// Beware: passing a base64 file as 'data:' is not supported on Android 2.x: https://code.google.com/p/android/issues/detail?id=7901#c43
+// Hint: when sharing a base64 encoded file on Android you can set the filename by passing it as the subject (second param)
+<button onclick="window.plugins.socialsharing.share(null, 'Android filename', 'data:image/png;base64,R0lGODlhDAAMALMBAP8AAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUKAAEALAAAAAAMAAwAQAQZMMhJK7iY4p3nlZ8XgmNlnibXdVqolmhcRQA7', null)">base64 image only</button>
+// Hint: you can share multiple files by using an array as thirds param: ['file 1','file 2', ..], but beware of this Android Kitkat Facebook issue: [#164]
+<button onclick="window.plugins.socialsharing.share('Message and image', null, 'https://www.google.nl/images/srpr/logo4w.png', null)">message and image</button>
+<button onclick="window.plugins.socialsharing.share('Message, image and link', null, 'https://www.google.nl/images/srpr/logo4w.png', 'http://www.x-services.nl')">message, image and link</button>
+<button onclick="window.plugins.socialsharing.share('Message, subject, image and link', 'The subject', 'https://www.google.nl/images/srpr/logo4w.png', 'http://www.x-services.nl')">message, subject, image and link</button>
+
+</p>
 </div>
 <!-- footer -->
 <div data-role="footer" data-position="fixed" data-id="ap_footer">
