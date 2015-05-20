@@ -42,8 +42,6 @@ function rekllama(){
 		if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
 
 // show the interstitial later, e.g. at end of game level
-function reklamaPlote(){
-	alert('intersistitial');
 if(AdMob) AdMob.showInterstitial();
 }
 
