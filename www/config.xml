@@ -19,7 +19,8 @@
 	<preference name="phonegap-version"           value="3.7.0" />          <!-- all: current version of PhoneGap -->
 	
 	<!-- Plugins  -->
-	<gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
+	<!--<gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />-->
+	<gap:plugin name="com.admob.plugin" version="3.0.0" source="plugins.cordova.io" />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
 	
 	<!-- Define app icon for each platform. -->
