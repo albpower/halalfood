@@ -10,12 +10,12 @@ function rekllama(){
 	if( /(android)/i.test(navigator.userAgent) ) { 
 		admobid = { // for Android
 			banner: 'ca-app-pub-9114339752225416/7304638684',
-			interstitial: ''
+			interstitial: 'ca-app-pub-9114339752225416/3546823081'
 		};
 	} else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
 		admobid = { // for iOS
 			banner: 'ca-app-pub-9114339752225416/7304638684',
-			interstitial: ''
+			interstitial: 'ca-app-pub-9114339752225416/3546823081'
 		};
 	} else {
 		admobid = { // for Windows Phone
@@ -39,5 +39,13 @@ function rekllama(){
         } else {
             initApp();
         }
+		if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
+
+// show the interstitial later, e.g. at end of game level
+function reklamaPlote(){
+	alert('intersistitial');
+if(AdMob) AdMob.showInterstitial();
+}
+
 //document.addEventListener('deviceready', initApp, false);
 }
