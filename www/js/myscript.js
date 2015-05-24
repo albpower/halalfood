@@ -7,11 +7,21 @@ function tranzicionet() {
 }
 
 //rekllamat 
-admob.initAdmob("ca-app-pub-9114339752225416/7304638684","ca-app-pub-9114339752225416/3546823081");
-document.addEventListener(admob.Event.onInterstitialReceive, this.onInterstitialReceive, false);
-function cacheInterstitial(){
-	admob.cacheInterstitial();
+var admobid = {};
+if( /(android)/i.test(navigator.userAgent) ){ // for android
+admobid = {
+	banner: ‘ca-app-pub-9114339752225416/7304638684’, // or DFP format “/6253334/dfp_example_ad”
+	interstitial: ‘ca-app-pub-9114339752225416/3546823081’
+};
 }
+else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)){ // for ios
+admobid = {
+	banner: ‘ca-app-pub-9114339752225416/7304638684’, // or DFP format “/6253334/dfp_example_ad”
+	interstitial: ‘ca-app-pub-9114339752225416/3546823081’
+};
+}
+}
+
 function showBanner(){
 	admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
 }
@@ -21,11 +31,7 @@ function hideBanner(){
 }
 
 function showInterstitial(){
-	admob.isInterstitialReady(function(isReady){
-		if(isReady){
-			admob.showInterstitial();
-		}
-	});
+	AdMob.prepareInterstitial({ adId:admobid.interstitial, autoShow:true });
 }
 
 /*function rekllama(){
