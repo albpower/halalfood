@@ -24,11 +24,13 @@ admobid = {
 
 function showBanner(){
 	alert('bannerii');
+	if (AdMob) {
 	AdMob.createBanner({
 				adId : admobid.banner,
 				position : AdMob.AD_POSITION.BOTTOM_CENTER,
 				autoShow : true
 			});
+}
 }
 
 function hideBanner(){
@@ -37,8 +39,11 @@ function hideBanner(){
 }
 
 function showInterstitial(){
-	alert('full');
+	if (AdMob) {
 	AdMob.prepareInterstitial({ adId:admobid.interstitial, autoShow:true });
+	AdMob.showInterstitial();
+	alert('full');
+	}
 }
 
 /*function rekllama(){
