@@ -20,7 +20,7 @@
 <script src="js/jquery.mobile-1.4.0-rc.1.min.js"></script>
 <script src="js/myscript.js"></script>
 <script>
-	
+
 </script>
 <script type="text/javascript" src="cordova.js"></script>
 </head>
@@ -95,12 +95,13 @@ take care of what he/she eats or drinks so we decided to help our brothers and s
 <a href="mailto:w0rt3x@hotmail.com" data-rel="external"><img src="images/mail-icon.png" width="30" height="30"></a><br>
 </p>
 <p>
-<button onclick="cacheInterstitial();">Cache/Prepare</button>
-<button onclick="showInterstitial();">Show</button>
+<!--<button onclick="cacheInterstitial();">Cache/Prepare</button> -->
+<button onclick="showInterstitial();">Show full rekllam</button>
 <button onclick="showBanner();">Show banner</button>
-
-<button onclick="window.plugins.socialsharing.shareViaFacebook('Duke degjuar Radio Pendimi http://radio-pendimi.com/webfaqe/live-kanali-1', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
-<button onclick="window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('Message via Facebook', null /* img */, null /* url */, 'Paste it dude!', function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
+<button onclick="hideBanner();">Hide banner</button>
+<h4>Share</h4>
+<button onclick="window.plugins.socialsharing.shareViaFacebook('Duke dëgjuar Radio Pendimin http://radio-pendimi.com/webfaqe/live-kanali-1', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
+<button onclick="window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('Duke dëgjuar Radio Pendimin http://radio-pendimi.com/webfaqe/live-kanali-1', null /* img */, null /* url */, 'Paste it dude!', function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
 <button onclick="window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via WhatsApp (with errcallback)</button>
 
 </p>
