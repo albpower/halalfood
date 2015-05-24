@@ -23,7 +23,11 @@ admobid = {
 }
 
 function showBanner(){
-	admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
+	AdMob.createBanner({
+				adId : admobid.banner,
+				position : AdMob.AD_POSITION.BOTTOM_CENTER,
+				autoShow : true
+			});
 }
 
 function hideBanner(){
