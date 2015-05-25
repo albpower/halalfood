@@ -38,9 +38,13 @@ function hideBanner(){
 	alert('banner hidden');
 }
 
-function showInterstitial(){
+function prepareInterstitial(){
 	if (AdMob) {
-	AdMob.prepareInterstitial({ adId:admobid.interstitial, autoShow:true });
+		AdMob.prepareInterstitial({ adId:admobid.interstitial, autoShow:false });
+	}
+}
+
+function showInterstitial(){
 	AdMob.showInterstitial();
 	alert('full');
 	}
@@ -81,14 +85,4 @@ function showInterstitial(){
             initApp();
         }
 		
-}
-
-function prepareInterstitial() {
-	alert('preparation complete');
-       AdMob.prepareInterstitial({adId:admobid.interstitial, autoShow:false});
-}
-
-// show the interstitial later, e.g. at end of game level
-if(AdMob) AdMob.showInterstitial();
-//document.addEventListener('deviceready', initApp, false);
 }*/
