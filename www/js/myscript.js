@@ -11,20 +11,15 @@ admob.initAdmob("ca-app-pub-9114339752225416/7304638684","ca-app-pub-91143397522
 document.addEventListener(admob.Event.onInterstitialReceive, this.onInterstitialReceive, false);
 admob.cacheInterstitial();
 
-admob.isInterstitialReady(function(isReady){
-    if(isReady){
-        alert("admob Interstitial loaded");
-    } else admob.cacheInterstitial();
-});
-
 function showBanner(){
 	admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
 	alert('banner show');
 }
 
+	
 function hideBanner(){
-	admob.hideBanner();
 	alert('banner is hidden');
+	admob.hideBanner();
 }
 
 function showInterstitial(){
