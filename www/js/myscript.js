@@ -35,7 +35,7 @@ document.addEventListener(admob.Event.onInterstitialReceive, this.onInterstitial
 admob.cacheInterstitial();
 */
 function showBanner(){
-	admob.showBannerAd)();
+	admob.showBannerAd();
 }
 
 	
