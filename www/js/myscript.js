@@ -15,7 +15,8 @@ function onDeviceReady() {
       admob.setOptions({
         publisherId:          "ca-app-pub-9114339752225416/7304638684",  // Required
         interstitialAdId:     "ca-app-pub-9114339752225416/3546823081",		// Optional
-		bannerAtBottom:       true,
+	bannerAtBottom:       true,
+	autoShowBanner:		true,
         tappxIdiOs:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
         tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
         tappxShare:           0.5                                        // Optional
@@ -25,7 +26,8 @@ function onDeviceReady() {
       admob.createBannerView();
 
       // Request interstitial (will present automatically when autoShowInterstitial is set to true)
-      admob.requestInterstitial();
+      admob.requestInterstitialAd({publisherId: "ca-app-pub-9114339752225416/7304638684", interstitialAdId: "ca-app-pub-9114339752225416/3546823081"});
+      //admob.requestInterstitial();
     }
 
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -41,7 +43,7 @@ function showBanner(){
 	
 function hideBanner(){
 	alert('banner is hidden');
-	admob.hideBanner();
+	admob.hideBannerAd();
 }
 
 function showInterstitial(){
