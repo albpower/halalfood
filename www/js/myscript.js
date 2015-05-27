@@ -16,7 +16,8 @@ function onDeviceReady() {
         publisherId:          "ca-app-pub-9114339752225416/7304638684",  // Required
         interstitialAdId:     "ca-app-pub-9114339752225416/3546823081",		// Optional
 	bannerAtBottom:       true,
-	autoShowBanner:		true,
+	autoShowBanner:	 	true,
+	autoShowInterstitial: false,
         tappxIdiOs:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
         tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
         tappxShare:           0.5                                        // Optional
@@ -37,13 +38,14 @@ document.addEventListener(admob.Event.onInterstitialReceive, this.onInterstitial
 admob.cacheInterstitial();
 */
 function showBanner(){
-	admob.showBannerAd();
+	admob.createBannerView();
+	//admob.showBannerAd();
 }
 
 	
 function hideBanner(){
+	admob.destroyBannerView();
 	alert('banner is hidden');
-	admob.hideBannerAd();
 }
 
 function showInterstitial(){
