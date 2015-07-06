@@ -13,7 +13,7 @@ function onDeviceReady() {
 
       // Set AdMobAds options:
       admob.setOptions({
-        publisherId:          "ca-app-pub-9114339752225416/7304638684",  // Required
+        publisherId:          "pub-9114339752225416",  // Required
         interstitialAdId:     "ca-app-pub-9114339752225416/3546823081",		// Optional
 	bannerAtBottom:       true,
 	autoShowBanner:	 	true,
