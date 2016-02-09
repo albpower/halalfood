@@ -20,7 +20,7 @@
 	
 	<!-- Plugins  -->
 	<!--<gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />-->
-	<!--<plugin name="com.admob.google" spec="4.0.8" source="pgb" /> -->
+	<gap:plugin name="cordova-admob" source="npm"/>
 	<plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
 	
 	<!-- Define app icon for each platform. -->
